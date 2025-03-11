@@ -18,10 +18,10 @@
     outline: none;
     border-radius: 20px;
     padding-left: 20px;
-    color:#afadb3;
-    background: #ebfffc;
+    color:#ffffff;
+    background: #291754;
     font-size: 18px;
-    opacity: .35;
+    opacity: .45;
 }
 /*.search-bar img{
     width: 50px;
@@ -32,9 +32,9 @@
 }
 */
 .search-bar img{
-    opacity: .40;
+    opacity: .45;
     cursor: pointer;
-    width: 40px;
+    width: 35px;
 }
 .temperature{
     color: #cedff2;
@@ -58,11 +58,11 @@
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    font-size: 22px;
+    font-size: 20px;
 }
 .weather-data .col span{
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     
 
 }
