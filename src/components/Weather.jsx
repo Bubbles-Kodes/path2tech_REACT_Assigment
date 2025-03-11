@@ -8,6 +8,8 @@ const Weather = () => {
   const inputRef = useRef()
   const [weatherData, setWeatherData] = useState(false);
 
+  
+
   const search = async (city)=>{
     if(city === ""){
       return alert('Please enter a city name')};
@@ -23,6 +25,7 @@ const Weather = () => {
         windSpeed: Math.floor(data.wind.speed * 2.237), // Convert m/s to mph and round down
         description: data.weather[0].description,
         temperature: Math.floor(data.main.temp),
+        weatherIcon: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`, // Construct the icon URL
         location: data.name
       });
     } catch (error) {
@@ -48,6 +51,7 @@ const handleKeyPress = (event) => {
         <img src={search_icon} alt="" onClick={()=>search(inputRef.current.value)}/>
       </div>
       {weatherData?<>
+        <img src={weatherData.weatherIcon} alt="weather icon" /> {/* Display the weather icon */}
       <p className='temperature'>{weatherData.temperature}°F</p>
       <p className='location'>{weatherData.location}</p>
       <div className='weather-data'>
